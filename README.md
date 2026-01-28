@@ -1,3 +1,7 @@
+<p align="center">
+    <img src="images/logo.png" alt="CredsMRU logo: hooded figure breaking a blue data cube with a pickaxe" style="width: 400px;"/>
+</p>
+
 ## Invoke-CredsMRU
 
 **Invoke-CredsMRU** is a PowerShell script to query MRU-style registry keys on a remote Windows host using either **RPC (WMI/CIM)** or **WinRM (PowerShell remoting)**.
