@@ -5,11 +5,11 @@
 .DESCRIPTION
     Invoke-CredsMRU allows you to collect MRU-style registry data from a remote Windows host.
 
-    - **Method RPC**  : Uses WMI/CIM (DCOM/RPC) and the `StdRegProv` provider.
+    - Method RPC  : Uses WMI/CIM (DCOM/RPC) and the StdRegProv provider.
                         Optionally starts the RemoteRegistry service on the target and
                         stops it again when finished.
 
-    - **Method WinRM**: Uses PowerShell remoting (WinRM) and reads the registry locally
+    - Method WinRM: Uses PowerShell remoting (WinRM) and reads the registry locally
                         on the remote host via standard PowerShell cmdlets.
 
     The first version intentionally does not parse or prettify the values – it simply
@@ -51,9 +51,9 @@
     Based on regex patterns from Invoke-FindEventCreds by The-Viper-One.
     See: https://github.com/The-Viper-One/Invoke-FindEventCreds
 
-    NOTE: This script focuses specifically on **per-user MRU data**. It:
-        - Reads the MRU of the **current authenticated user** (for WinRM).
-        - Enumerates all loaded user SIDs under **HKEY_USERS** and reads their MRU keys.
+    NOTE: This script focuses specifically on per-user MRU data. It:
+        - Reads the MRU of the current authenticated user (for WinRM).
+        - Enumerates all loaded user SIDs under HKEY_USERS and reads their MRU keys.
         - Uses a fixed MRU path relative to each user hive:
               Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
 
